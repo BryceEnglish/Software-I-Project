@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.AddProductController">
+   <children>
+      <Button layoutX="431.0" layoutY="363.0" mnemonicParsing="false" onAction="#saveAddProduct" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button layoutX="498.0" layoutY="363.0" mnemonicParsing="false" onAction="#cancelAddProduct" text="Cancel" />
+      <Button fx:id="addProductBtn" layoutX="498.0" layoutY="194.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="25.0" prefWidth="52.0" text="Add" />
+      <Button layoutX="499.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteProduct" text="Delete" />
+      <TextField fx:id="prodIdTxt" disable="true" editable="false" layoutX="60.0" layoutY="128.0" text="Auto gen - Disabled" />
+      <TextField fx:id="prodNameTxt" layoutX="60.0" layoutY="161.0" />
+      <TextField fx:id="prodInvTxt" layoutX="60.0" layoutY="194.0" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="prodPriceTxt" layoutX="60.0" layoutY="225.0" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="prodMaxTxt" layoutX="60.0" layoutY="257.0" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="prodMinTxt" layoutX="165.0" layoutY="257.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="14.0" layoutY="132.0" text="ID" />
+      <Label layoutX="12.0" layoutY="165.0" text="Name" />
+      <Label layoutX="12.0" layoutY="198.0" text="Inv" />
+      <Label layoutX="14.0" layoutY="229.0" text="Price" />
+      <Label layoutX="12.0" layoutY="261.0" text="Max" />
+      <Label layoutX="135.0" layoutY="261.0" text="Min" />
+      <Label layoutX="21.0" layoutY="49.0" text="Add Product" />
+      <Button layoutX="331.0" layoutY="54.0" mnemonicParsing="false" onAction="#lookupProduct" text="Search" />
+      <TextField fx:id="productSearchBox" layoutX="401.0" layoutY="54.0" />
+      <TableView fx:id="partsToPickTable" layoutX="253.0" layoutY="82.0" prefHeight="110.0" prefWidth="308.0">
+        <columns>
+          <TableColumn fx:id="partsIdCol" prefWidth="54.0" text="Part ID" />
+          <TableColumn fx:id="partsNameCol" prefWidth="72.0" text="Part Name" />
+            <TableColumn fx:id="partsInvCol" prefWidth="99.0" text="Inventory Level" />
+            <TableColumn fx:id="partsPriceCol" prefWidth="82.0" text="Price per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="assocPartsTable" layoutX="253.0" layoutY="222.0" prefHeight="103.0" prefWidth="308.0">
+         <columns>
+            <TableColumn fx:id="aPartIdCol" prefWidth="54.0" text="Part ID" />
+            <TableColumn fx:id="aPartNameCol" prefWidth="72.0" text="Part Name" />
+            <TableColumn fx:id="aPartInvCol" prefWidth="99.0" text="Inventory Level" />
+            <TableColumn fx:id="aPartPriceCol" prefWidth="82.0" text="Price per Unit" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

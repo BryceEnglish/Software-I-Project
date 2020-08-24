@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ModifyPartController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <RadioButton fx:id="InHouseRadio" layoutX="195.0" layoutY="55.0" mnemonicParsing="false" onAction="#pickInHouse" text="In-House" />
+            <RadioButton fx:id="outSourcedRadio" layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onAction="#pickOutsourced" text="Outsourced" />
+            <Button layoutX="440.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveUpdatePart" text="Save" />
+            <Button layoutX="509.0" layoutY="344.0" mnemonicParsing="false" onAction="#cancelUpdatePart" text="Cancel" />
+            <TextField fx:id="modPartIdTxt" disable="true" editable="false" layoutX="211.0" layoutY="110.0" />
+            <TextField fx:id="modPartNameTxt" layoutX="211.0" layoutY="148.0" />
+            <TextField fx:id="modPartInvTxt" layoutX="211.0" layoutY="188.0" />
+            <TextField fx:id="modPartPriceTxt" layoutX="211.0" layoutY="225.0" />
+            <TextField fx:id="modPartMaxTxt" layoutX="211.0" layoutY="258.0" prefHeight="25.0" prefWidth="70.0" />
+            <TextField fx:id="modPartMinTxt" layoutX="360.0" layoutY="258.0" prefHeight="25.0" prefWidth="70.0" />
+            <TextField fx:id="modPartMacTxt" layoutX="226.0" layoutY="299.0" />
+            <Label layoutX="21.0" layoutY="30.0" text="Modify Part" />
+            <Label layoutX="133.0" layoutY="114.0" text="ID" />
+            <Label layoutX="131.0" layoutY="152.0" text="Name" />
+            <Label layoutX="133.0" layoutY="192.0" text="Inv" />
+            <Label layoutX="133.0" layoutY="229.0" text="Price/Cost" />
+            <Label layoutX="133.0" layoutY="262.0" text="Max" />
+            <Label layoutX="300.0" layoutY="262.0" text="Min" />
+            <Label fx:id="companyLabel" layoutX="131.0" layoutY="303.0" text="Machine ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
